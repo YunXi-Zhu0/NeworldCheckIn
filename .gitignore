@@ -1,0 +1,7 @@
+.idea/
+.vscode/
+.env
+dist/
+build/
+coverage.out
+/checkin
