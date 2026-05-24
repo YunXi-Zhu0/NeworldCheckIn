@@ -36,7 +36,7 @@ go build -o checkin ./cmd/checkin
 sudo bash ./scripts/install-ubuntu-checkin.sh
 ```
 
-This installs the binary and config to `/opt/checkin` and enables a `systemd` timer that runs once per day at a random time between `06:00` and `09:00`.
+This installs the binary and config to `/opt/neworld_check-in` and enables a `systemd` timer that runs once per day at a random time between `06:00` and `09:00`.
 
 ## Endpoint
 

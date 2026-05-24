@@ -23,7 +23,7 @@ sudo bash ./scripts/install-ubuntu-checkin.sh
 
 安装后会自动：
 
-- 部署到 `/opt/checkin`
+- 部署到 `/opt/neworld_check-in`
 - 安装 `checkin.service` 和 `checkin.timer`
 - 每天早上 `06:00-09:00` 随机签到一次
 

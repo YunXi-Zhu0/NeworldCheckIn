@@ -6,7 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 APP_NAME="checkin"
-DEPLOY_DIR="/opt/checkin"
+DEPLOY_DIR="/opt/neworld_check-in"
 BINARY_SOURCE="${REPO_ROOT}/checkin"
 CONFIG_SOURCE="${REPO_ROOT}/config.yaml"
 SERVICE_PATH="/etc/systemd/system/${APP_NAME}.service"
