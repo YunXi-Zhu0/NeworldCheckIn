@@ -27,6 +27,20 @@ sudo bash ./scripts/install-ubuntu-checkin.sh
 - 安装 `checkin.service` 和 `checkin.timer`
 - 每天早上 `06:00-09:00` 随机签到一次
 
+## Ubuntu 卸载
+
+直接执行卸载脚本：
+
+```bash
+sudo bash ./scripts/uninstall-ubuntu-checkin.sh
+```
+
+卸载后会自动：
+
+- 停止并禁用 `checkin.timer`
+- 删除 `checkin.service` 和 `checkin.timer`
+- 删除 `/opt/neworld_check-in`
+
 ## 常用命令
 
 ```bash
