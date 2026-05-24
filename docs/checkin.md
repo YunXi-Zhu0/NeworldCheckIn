@@ -21,6 +21,23 @@ NEWORD_EMAIL='your-email@example.com' NEWORD_PASSWD='your-password' go run ./cmd
 
 Priority order is `CLI > ENV > config.yaml`.
 
+## Ubuntu deployment
+
+1. Build the binary:
+
+```bash
+go build -o checkin ./cmd/checkin
+```
+
+2. Fill in `config.yaml`.
+3. Install the timer:
+
+```bash
+sudo bash ./scripts/install-ubuntu-checkin.sh
+```
+
+This installs the binary and config to `/opt/checkin` and enables a `systemd` timer that runs once per day at a random time between `06:00` and `09:00`.
+
 ## Endpoint
 
 - Method: `POST`

@@ -1,24 +1,36 @@
-# Checkin
+# NeworldCheckin
 
-Go CLI for running the daily `neworld.space` check-in flow.
+每天自动签到的 Go 小工具。
 
-## Command
+## 配置
 
-```bash
-go run ./cmd/checkin --email 'your-email@example.com' --passwd 'your-password'
-```
-
-You can also put credentials in `config.yaml` at the repo root:
+先准备 `config.yaml`：
 
 ```yaml
 email: "your-email@example.com"
 passwd: "your-password"
 ```
 
-The CLI also supports environment variables:
+可直接复制 `config.yaml.example` 修改。
+
+## Ubuntu 部署
+
+直接执行安装脚本：
 
 ```bash
-NEWORD_EMAIL='your-email@example.com' NEWORD_PASSWD='your-password' go run ./cmd/checkin
+sudo bash ./scripts/install-ubuntu-checkin.sh
 ```
 
-Priority order is `CLI > ENV > config.yaml`. Use `config.yaml.example` as the template, and keep the real `config.yaml` out of Git.
+安装后会自动：
+
+- 部署到 `/opt/checkin`
+- 安装 `checkin.service` 和 `checkin.timer`
+- 每天早上 `06:00-09:00` 随机签到一次
+
+## 常用命令
+
+```bash
+systemctl status checkin.timer
+systemctl start checkin.service
+journalctl -u checkin.service -n 50 --no-pager
+```
