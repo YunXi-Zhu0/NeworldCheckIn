@@ -6,11 +6,20 @@
 go run ./cmd/checkin --email 'your-email@example.com' --passwd 'your-password'
 ```
 
+Or put credentials in `config.yaml`:
+
+```yaml
+email: "your-email@example.com"
+passwd: "your-password"
+```
+
 Or:
 
 ```bash
 NEWORD_EMAIL='your-email@example.com' NEWORD_PASSWD='your-password' go run ./cmd/checkin
 ```
+
+Priority order is `CLI > ENV > config.yaml`.
 
 ## Endpoint
 

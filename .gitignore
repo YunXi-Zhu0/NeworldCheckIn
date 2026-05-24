@@ -1,6 +1,7 @@
 .idea/
 .vscode/
 .env
+config.yaml
 dist/
 build/
 coverage.out
